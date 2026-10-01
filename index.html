@@ -55,6 +55,11 @@
             display: inline;
             margin-left: 6px;
         }
+
+        input[type="radio"] + label {
+            display: inline;
+            margin-left: 6px;
+        }
  
         button {
             width: 100%;
@@ -83,30 +88,30 @@
     <form onsubmit="alert ('Registrazione inviata!')">
         <div>
             <label for="name">Nome:</label>
-            <input type="text" placeholder="Inserisci il tuo nome" />
+            <input type="text" placeholder="Inserisci il tuo nome" required />
         </div>
         <div>
             <label for="cognome">Cognome:</label>
-            <input type="text" placeholder="Inserisci il tuo cognome" />
+            <input type="text" placeholder="Inserisci il tuo cognome" required />
         </div>
         <div>
             <label for="email">Indirizzo email:</label>
-            <input type="email" placeholder="Inserisci un indirizzo email" />
+            <input type="email" placeholder="Inserisci un indirizzo email" required />
         </div>
         <div>
             <label for="password">Inserisci una password:</label>
-            <input type="password" placeholder="Inserisci una password" />
+            <input type="password" placeholder="Inserisci una password" required />
         </div>
         <div>
             <label for="data">Data di nascita:</label>
-            <input type="date" placeholder="Inserisci la tua data di nascita" />
+            <input type="date" placeholder="Inserisci la tua data di nascita" required />
         </div>
        
         <div>
              <label for="numero">Numero di telefono:</label>
-            <input type="tel" placeholder="Inserisci il tuo numero di telefono" />
+            <input type="tel" placeholder="Inserisci il tuo numero di telefono" required />
         </div>
-        <h3>Seleziona i tuoi generi musicali preferiti</h3>
+        <h3>Se vuoi seleziona i tuoi generi musicali preferiti</h3>
         <div>
             <input type="checkbox" id="rock" />
             <label for="rock">Rock</label>
@@ -128,7 +133,7 @@
             <label for="rap">Rap</label>
         </div>
         <div class="termini">
-            <input type="checkbox" id="termini" />
+            <input type="radio" id="termini" name="termini" required />
             <label for="termini">Accetta termini e condizioni</label>
         </div>
         <button type="submit">Procedi alla registrazione</button> 
